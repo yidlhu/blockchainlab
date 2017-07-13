@@ -18,7 +18,7 @@ function insertRow(funcName, req, res){
     var today = new Date();
 
     var reqJSONString = JSON.stringify(req.body) ;
-    var batch = req.body.shipment_id;
+    var batch = req.body.shipment_id || req.body.batch;
 
     if (batch == undefined || batch == null || batch.length == 0) {
         res
